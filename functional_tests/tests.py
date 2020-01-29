@@ -22,4 +22,10 @@ class NewVisitorTest(unittest.TestCase):
         # He notices the page title and header mention to-do lists
         self.assertIn('Edu-Match', self.browser.title) 
 
+        #He want to chat with his friend ,so he type name of his friend group and pressed enter to join the chat .
+        search_box = self.browser.find_element_by_id('room-name-input')
+        submit_button = self.browser.find_element_by_id('room-name-submit')
+        search_box.send_keys('Cpr.E 16')
+
+        
         self.fail('Finish the test!')
